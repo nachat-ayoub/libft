@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:34:30 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/30 19:11:27 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/04 15:56:22 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	dest[d_len + i] = '\0';
 	return (d_len + s_len);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main ()
-// {
-// 	printf("res : %zu\n", ft_strlcat("hello", "worl", 5));
-// 	printf("res : %zu\n", strlcat("hello", "worl", 5));
-// }
