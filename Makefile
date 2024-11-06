@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $@ $?
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $?
 
 bonus: $(BOBJECTS)

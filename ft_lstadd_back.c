@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:06:28 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/31 20:24:26 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/06 11:29:47 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_elm;
 
+	if(!lst)
+		return ;
 	last_elm = ft_lstlast((*lst));
 	if (!last_elm)
 		(*lst) = new;
