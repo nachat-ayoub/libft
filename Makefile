@@ -12,7 +12,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $@ $?
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $?
+	$(CC) $(CFLAGS) -c $<
 
 bonus: $(BOBJECTS)
 	ar rcs $(NAME) $?
