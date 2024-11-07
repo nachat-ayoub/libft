@@ -6,13 +6,13 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:39:43 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/07 17:06:14 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/07 22:26:07 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char *str, char sep)
+static int	count_words(const char *str, char sep)
 {
 	size_t	i;
 	int		wc;
@@ -67,25 +67,16 @@ static char	*fill_mem(char *str, int start, int end)
 	return (word);
 }
 
-static void	init_vars(size_t *i, int *j, int *start)
+static char	**fill_array(char **arr, const char *s, char c)
 {
-	*i = 0;
-	*j = 0;
-	*start = -1;
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**arr;
 	size_t	i;
-	int		j;
+	size_t	j;
 	int		start;
 
-	arr = ft_calloc((count_words((char *)s, c) + 1), sizeof(char *));
-	if (!arr)
-		return (NULL);
-	init_vars(&i, &j, &start);
-	while (s && i <= ft_strlen(s))
+	i = 0;
+	j = 0;
+	start = -1;
+	while (i <= ft_strlen(s))
 	{
 		if (start < 0 && s[i] != c)
 			start = i;
@@ -100,4 +91,16 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	return (arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	arr = ft_calloc((count_words(s, c) + 1), sizeof(char *));
+	if (!arr)
+		return (NULL);
+	return (fill_array(arr, s, c));
 }
