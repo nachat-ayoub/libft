@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:34:30 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/05 10:20:25 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/07 15:45:31 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ size_t	ft_strlcat(char *dest, char *src, size_t dstsize)
 	size_t	s_len;
 	size_t	i;
 
-	d_len = ft_strlen(dest);
 	s_len = ft_strlen(src);
+	if (dstsize == 0 && !dest && src)
+		return (s_len);
+	d_len = ft_strlen(dest);
 	if (dstsize <= d_len)
 		return (dstsize + s_len);
 	i = 0;

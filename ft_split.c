@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:39:43 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/30 20:53:47 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/07 17:06:14 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (NULL);
 	init_vars(&i, &j, &start);
-	while (i <= ft_strlen(s))
+	while (s && i <= ft_strlen(s))
 	{
 		if (start < 0 && s[i] != c)
 			start = i;

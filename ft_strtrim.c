@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:01:32 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/05 10:55:44 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/07 15:45:27 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	ft_strincludes(char c, char *set)
 {
 	size_t	i;
 
+	if (!set || ft_strlen(set) == 0)
+		return (0);
 	i = 0;
 	while (set[i])
 	{
