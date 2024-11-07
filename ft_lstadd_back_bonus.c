@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:06:28 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/06 12:36:10 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/07 22:37:22 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_elm;
 
-	if (!lst)
+	if (!lst || !new)
 		return ;
 	last_elm = ft_lstlast((*lst));
 	if (!last_elm)
