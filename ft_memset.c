@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:18:10 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/08 20:05:30 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:32:26 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t			i;
 
 	ch = (unsigned char) c;
-	str = b;
+	str = (unsigned char *) b;
 	i = 0;
 	while (i < len)
 	{
