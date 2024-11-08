@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:13:00 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/30 21:28:43 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/08 19:21:03 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nb;
 
+	if(fd < 0)
+		return ;
 	nb = n;
 	if (n < 0)
 	{
