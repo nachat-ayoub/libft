@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:39:24 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/08 12:01:48 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/08 12:31:58 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*curr;
 
-	if(!lst || !f)
+	if (!lst || !f)
 		return ;
 	curr = lst;
 	while (curr)
