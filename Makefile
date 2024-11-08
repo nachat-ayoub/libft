@@ -9,13 +9,13 @@ CFLAGS=-Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $@ $?
+	ar rcs $@ $^
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $<
 
 bonus: $(BOBJECTS)
-	ar rcs $(NAME) $?
+	ar rcs $(NAME) $^
 
 clean:
 	rm -rf $(OBJECTS) $(BOBJECTS)
