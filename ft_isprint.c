@@ -6,9 +6,11 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:14:35 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/26 11:37:29 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:26:00 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

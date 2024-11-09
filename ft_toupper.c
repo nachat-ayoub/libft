@@ -6,9 +6,11 @@
 /*   By: anachat <anachat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:43:13 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/25 14:55:05 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:27:06 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
