@@ -6,12 +6,12 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:49:40 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/08 12:12:51 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/09 19:39:45 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H
+# define LIBFT_H 
 # include <unistd.h>
 # include <stdlib.h>
 
