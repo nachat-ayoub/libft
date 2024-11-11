@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:23:41 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/29 15:38:58 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/11 21:13:46 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	if (!dst && !src)
 		return (NULL);
+	if (dst == src)
+		return (dst);
 	s = (char *) src;
 	d = (char *) dst;
 	i = 0;
