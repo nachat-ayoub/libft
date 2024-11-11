@@ -6,7 +6,7 @@
 #    By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 17:41:09 by anachat           #+#    #+#              #
-#    Updated: 2024/11/09 17:41:57 by anachat          ###   ########.fr        #
+#    Updated: 2024/11/11 20:30:09 by anachat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,13 +21,12 @@ CFLAGS=-Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $@ $^
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $<
+	ar rcs $(NAME) $@
 
 bonus: $(BOBJECTS)
-	ar rcs $(NAME) $^
 
 clean:
 	rm -rf $(OBJECTS) $(BOBJECTS)

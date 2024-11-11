@@ -6,17 +6,24 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:27:19 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/09 17:34:38 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:21:02 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	fix_val(int sign)
+{
+	if (sign == 1)
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	nb;
+	int		i;
+	int		s;
+	long	nb;
 
 	s = 1;
 	i = 0;
@@ -31,6 +38,9 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
+		if (nb > 922337203685477580
+			|| ((nb == 922337203685477580) && str[i] > '7'))
+			return (fix_val(s));
 		nb = nb * 10;
 		nb += str[i] - '0';
 		i++;
