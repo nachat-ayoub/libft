@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:06:17 by anachat           #+#    #+#             */
-/*   Updated: 2024/11/08 19:29:38 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/15 12:22:22 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
-	if (fd < 0 || !s)
+	if (!s)
 		return ;
 	i = 0;
 	while (s[i])

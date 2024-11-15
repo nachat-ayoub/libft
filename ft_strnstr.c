@@ -6,7 +6,7 @@
 /*   By: anachat <anachat@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:19:49 by anachat           #+#    #+#             */
-/*   Updated: 2024/10/26 10:29:51 by anachat          ###   ########.fr       */
+/*   Updated: 2024/11/15 11:52:32 by anachat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (needle[0] == '\0')
 		return (str);
 	i = 0;
-	while (str[i] && i < len)
+	while (i < len && str[i])
 	{
 		j = 0;
 		while (needle[j] && (i + j) < len && needle[j] == str[i + j])
